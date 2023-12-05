@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>NFL Teams</h1>
+        <a href="#" id="add-link">+</a>
+    </header>
+
+    <div class="columns two-columns">
+        <div id="team-list" class="columns"></div>
+        <div id="team-details-column">
+            <h2>Details</h2>
+
+            <div id="team-details"></div>
+        </div>
+    </div>
+    <div id="add-edit-team-container" class="dialog transparent">
+        <span class="close">&times;</span>
+
+        <h3 id="add-edit-title">Team</h3>
+        <form id="add-edit-team-form" method="post">
+            <input type="hidden" name="_id" value="-1" />
+            <p>
+                <label for="name ">Team Name:</label>
+                <input type="text" id="name" name="name" required />
+            </p>
+            <p>
+                <label for="description">Owner:</label>
+                <input type="text" id="description" name="description" required />
+            </p>
+
+            <p id="players-p ">
+                <label class="inline">Players:</label>
+                <a href="#" id="add-player">Add Player</a>
+                <section id="player-boxes"></section>
+            </p>
+            <p>
+                <button type="submit">Submit</button>
+            </p>
+        </form>
+    </div>
+</body>
+
+</html>
